@@ -21,10 +21,25 @@ async function petsArea() {
     const clone = template.content.cloneNode(true)
 
     clone.querySelector("h3").textContent = pet.name
+    clone.querySelector("p.pet-description").textContent = pet.description
+    clone.querySelector("p.pet-age").textContent = createAgeText(pet.birthYear)
+
+    clone.querySelector("img").src = pet.photo
 
     wrapper.appendChild(clone)
+    console.log(pet.photo)
   })
+
   document.querySelector(".list-of-pets").appendChild(wrapper)
 }
 
 petsArea()
+
+function createAgeText(birthYear) {
+  const currentYear = new Date().getFullYear()
+  const age = currentYear - birthYear
+
+  if (age == 1) return "1 Year old"
+  if (age == 0) return "Less than a Year Old"
+  return `${age} Years Old`
+}
