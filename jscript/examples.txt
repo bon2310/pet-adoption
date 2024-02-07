@@ -1,0 +1,123 @@
+
+Storing const (variables) and outputting in HTML
+js script
+const firstname = "Brian"
+const lastname = "O'Neill"
+const fullname = lastname + ", " + firstname
+
+document.querySelector("#output").textContent = fullname
+
+HTML script
+<h1 id="output"></h1>
+
+
+
+
+Result from input and clicking a button
+HTML script
+<input id="berry-field" type="text"><button id="berry-button">Do I have enough berries?</button>
+<p id="message"></p>
+
+
+js script
+document.querySelector("#berry-button").addEventListener("click", function() {
+  if (document.querySelector("#berry-field").value > 9) {
+    document.querySelector("#message").textContent = "Congrats you do have enough Berries!"
+  } else {
+        document.querySelector("#message").textContent = "Sorry no you don't have enough Berries! Keep picking"
+
+  }
+})
+
+
+const ourNumber = doubleMe(3)
+
+
+function doubleMe(incoming) {
+  return incoming * 2
+}
+
+function tripleMe(incoming) {
+  return incoming * 3
+}
+
+console.log(ourNumber)
+
+console.log(tripleMe(20))
+
+console.log(tripleMe(doubleMe(10)))
+
+
+const cat = {
+  name:  "Meowsalot",
+  eyeColor: "green",
+  favFood: "tuna",
+  catSound: function() {
+    console.log("The cat meows!!!")
+  }
+}
+
+console.log(cat.name)
+cat.catSound()
+
+
+
+
+
+Try It Yourself!
+Create a function definition named doubleMe which accepts one argument. Your function should return the incoming value doubled (multiplied by 2).
+
+
+function doubleMe(incoming) {
+    return incoming * 2
+}
+
+console.log(doubleMe(3))
+
+
+Database for pets
+
+https://learnwebcode.github.io/bootcamp-pet-data/pets.json
+
+
+
+Free icons
+https://icons.getbootstrap.com/icons/water/
+
+
+
+.pet-filter button:hover {
+  color: #7d7d7d;
+}
+
+.pet-filter .active,
+.pet-filter .active:hover {
+  color: #475AFF;
+  text-decoration: underline;
+}
+.pet-filter button:hover {
+  color: #7d7d7d;
+}
+
+.pet-filter .active,
+.pet-filter .active:hover {
+  color: #475AFF;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+      <div class="pet-card">
+          <div class="pet-card-text">
+            <h3>Barksalot</h3>
+            <p class="pet-description">Barksalot is a sweet and lovable 3 year old ball of fluff. He loves carrots,
+              celery, and playing fetch.</p>
+            <p class="pet-age">2 Years Old</p>
+          </div>
+          <div class="pet-card-photo">
+            <img src="images/barksalot.jpg" alt="A white fluffy dog named Barskalot">
+          </div>
+        </div><!-- end of pet card -->
