@@ -13,7 +13,7 @@ async function start() {
 start()
 
 async function petsArea() {
-  const petsPromise = await fetch("https://incomparable-wisp-47922d.netlify.app/.netlify/functions/pets")
+  const petsPromise = await fetch("https://learnwebcode.github.io/bootcamp-pet-data/pets.json")
   const petsData = await petsPromise.json()
   petsData.forEach(pet => {
     const clone = template.content.cloneNode(true)
@@ -70,3 +70,10 @@ function handleButtonClick(e) {
     }
   })
 }
+
+
+
+
+
+netlify : File C:\Users\Lenovo\AppData\Roaming\npm\netlify.ps1 cannot be loaded because running scripts is disabled on this system. For more 
+information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
